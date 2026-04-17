@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Refer a Friend | Conexion Insurance Agency</title>
+  <meta name="description" content="Refer a friend to Conexion Insurance Agency in Kansas City and help them find better coverage at a better price.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div id="site-header"></div>
+
+  <main class="subpage-main">
+    <div class="subpage-hero">
+      <div class="container">
+        <p class="eyebrow">Spread the Word</p>
+        <h1>Refer a Friend</h1>
+        <p>Know someone who needs better insurance? Send their info our way and we'll take great care of them — just like we do for you.</p>
+      </div>
+    </div>
+
+    <div class="subpage-content">
+      <div class="container">
+        <div class="refer-form-wrap">
+          <h2 style="font-size:22px;font-weight:800;margin-bottom:6px;color:var(--ink);">Referral Form</h2>
+          <p style="color:var(--ink-light);margin-bottom:32px;font-size:15px;">Fill out the form below and we'll reach out to your friend promptly.</p>
+
+          <form id="refer-form" novalidate>
+            <p style="font-size:12px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--muted);margin-bottom:16px;">Your Information</p>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="yourFirstName">Your First Name</label>
+                <input type="text" id="yourFirstName" name="yourFirstName" required placeholder="Jane" autocomplete="given-name">
+              </div>
+              <div class="form-group">
+                <label for="yourLastName">Your Last Name</label>
+                <input type="text" id="yourLastName" name="yourLastName" required placeholder="Smith" autocomplete="family-name">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="yourEmail">Your Email</label>
+              <input type="email" id="yourEmail" name="yourEmail" required placeholder="jane@example.com" autocomplete="email">
+            </div>
+
+            <p style="font-size:12px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--muted);margin:28px 0 16px;">Friend's Information</p>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="friendFirstName">Friend's First Name</label>
+                <input type="text" id="friendFirstName" name="friendFirstName" required placeholder="John">
+              </div>
+              <div class="form-group">
+                <label for="friendLastName">Friend's Last Name</label>
+                <input type="text" id="friendLastName" name="friendLastName" required placeholder="Doe">
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="friendPhone">Friend's Phone</label>
+                <input type="tel" id="friendPhone" name="friendPhone" placeholder="(913) 000-0000">
+              </div>
+              <div class="form-group">
+                <label for="friendEmail">Friend's Email</label>
+                <input type="email" id="friendEmail" name="friendEmail" placeholder="john@example.com">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="insuranceNeeds">What type of insurance do they need?</label>
+              <select id="insuranceNeeds" name="insuranceNeeds">
+                <option value="">Select coverage type...</option>
+                <option value="auto">Auto Insurance</option>
+                <option value="home">Homeowners Insurance</option>
+                <option value="renters">Renters Insurance</option>
+                <option value="commercial">Commercial / Business</option>
+                <option value="life">Life Insurance</option>
+                <option value="bundle">Bundle (Home + Auto)</option>
+                <option value="other">Other / Not Sure</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="referralNote">Anything else we should know?</label>
+              <textarea id="referralNote" name="referralNote" rows="3" placeholder="Optional note about your friend's situation..."></textarea>
+            </div>
+            <button type="submit" class="btn-primary btn-full" style="margin-top:8px;">Submit Referral</button>
+            <div id="refer-success" hidden style="margin-top:16px;padding:16px;background:#f0fdf4;border:1px solid #bbf7d0;border-radius:var(--radius-sm);color:#166534;font-size:14px;text-align:center;">
+              Thank you! We'll reach out to your friend soon.
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="components.js"></script>
+  <script src="script.js"></script>
+  <script>
+    document.getElementById('refer-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      document.getElementById('refer-success').hidden = false;
+      this.reset();
+    });
+  </script>
+</body>
+</html>
