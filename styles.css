@@ -387,17 +387,17 @@ input, select, textarea { font: inherit; }
 .hero {
   padding-top: var(--nav-h);
   padding-bottom: 80px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  flex-direction: column;
   align-items: center;
+  text-align: center;
   max-width: var(--max-w);
   margin: 0 auto;
   padding-left: 24px;
   padding-right: 24px;
-  gap: 60px;
 }
 
-.hero-content { padding: 80px 0; }
+.hero-content { padding: 80px 0; max-width: 720px; }
 
 .hero-headline {
   font-size: clamp(38px, 5.5vw, 62px);
@@ -412,13 +412,14 @@ input, select, textarea { font: inherit; }
   color: var(--ink-light);
   line-height: 1.65;
   max-width: 480px;
-  margin-bottom: 36px;
+  margin: 0 auto 36px;
 }
 
 .hero-actions {
   display: flex;
   gap: 12px;
   flex-wrap: wrap;
+  justify-content: center;
   margin-bottom: 48px;
 }
 
@@ -644,10 +645,10 @@ input, select, textarea { font: inherit; }
 .about-feature strong { font-size: 15px; font-weight: 700; display: block; margin-bottom: 2px; }
 .about-feature p { font-size: 14px; color: var(--ink-light); margin: 0; }
 
-.about-stats-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 16px;
+.about-reviews {
+  display: flex;
+  align-items: flex-start;
+  min-width: 0;
 }
 
 .stat-card {
@@ -673,6 +674,14 @@ input, select, textarea { font: inherit; }
 /* ═══════════════════════════════════════════════
    CARRIERS MARQUEE
 ════════════════════════════════════════════════ */
+/* ═══════════════════════════════════════════════
+   REVIEWS
+════════════════════════════════════════════════ */
+.reviews-section {
+  padding: 80px 0;
+  background: var(--surface);
+}
+
 .carriers-section {
   padding: 48px 0;
   background: var(--bg-soft);
@@ -1113,7 +1122,6 @@ a.contact-item:hover .contact-item__icon { background: #fff0ea; }
   .nav-container { gap: 0; }
 
   .quote-grid { grid-template-columns: 1fr; max-width: 480px; margin: 0 auto; }
-  .about-stats-grid { grid-template-columns: 1fr 1fr; }
   .form-row { grid-template-columns: 1fr; }
   .footer-grid { grid-template-columns: 1fr; gap: 28px; }
   .hero-visual { display: none; }
