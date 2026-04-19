@@ -40,7 +40,7 @@
             <li><a href="our-videos.html">Our Videos</a></li>
             <li><a href="insurance-carriers.html">Insurance Carriers</a></li>
             <li><a href="client-testimonials.html">Client Testimonials</a></li>
-            <li><a href="refer-a-friend.html">Refer a Friend</a></li>
+            <li><a href="faq.html">FAQ</a></li>
             <li><a href="agency-photo-gallery.html">Photo Gallery</a></li>
             <li><a href="accessibility-statement.html">Accessibility Statement</a></li>
             <li><a href="privacy-policy.html">Privacy Policy</a></li>
@@ -81,7 +81,7 @@
       <li><a href="our-videos.html" class="mobile-nav-link">Our Videos</a></li>
       <li><a href="insurance-carriers.html" class="mobile-nav-link">Insurance Carriers</a></li>
       <li><a href="client-testimonials.html" class="mobile-nav-link">Client Testimonials</a></li>
-      <li><a href="refer-a-friend.html" class="mobile-nav-link">Refer a Friend</a></li>
+      <li><a href="faq.html" class="mobile-nav-link">FAQ</a></li>
       <li><a href="agency-photo-gallery.html" class="mobile-nav-link">Photo Gallery</a></li>
       <li><a href="index.html#contact" class="mobile-nav-link">Contact</a></li>
     </ul>
